@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - NLCC</title>
+    <meta name="description" content="Upcoming and past workshops by Nara Lab on Computational Cognition.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="NLCC Logo" class="logo-img">
+                <img src="images/iitlogo.png" alt="IIT Mandi Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workshops.html" class="blink active">Workshops</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 6rem;">
+            <h1 class="section-title animate-fade-in">Workshops & Events</h1>
+            <p class="section-subtitle animate-fade-in delay-1">Explore our latest workshops, download brochures, and
+                register to join our computational cognition events.</p>
+
+            <div class="grid" style="grid-template-columns: 1fr; gap: 3rem;">
+                <div class="card animate-fade-in delay-1" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <span
+                                style="background-color: var(--accent); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Upcoming</span>
+                            <h3
+                                style="color: var(--text-primary); font-size: 1.75rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                Cognitive Neuroscience & AI Symposium 2026</h3>
+                            <p style="font-weight: 500; font-size: 1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                                Date: To be announced soon | Location: IIT Mandi Campus</p>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary);"> Details to be added.</p>
+
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#" class="btn btn-outline"
+                            style="margin-left: 0; display: inline-flex; align-items: center; gap: 0.5rem;"
+                            onclick="event.preventDefault(); alert('Brochure PDF downloading...');">
+                            📄 View Brochure
+                        </a>
+                        <a href="#" class="btn btn-primary"
+                            style="margin-left: 0; display: inline-flex; align-items: center; gap: 0.5rem;"
+                            onclick="event.preventDefault(); alert('Redirecting to the Registration Portal...');">
+                            ✅ Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Nara Lab on Computational Cognition</div>
+            <p>&copy; 2026 NLCC. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.card').forEach((el) => {
+                el.style.opacity = '0';
+                el.classList.remove('animate-fade-in', 'delay-1', 'delay-2');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

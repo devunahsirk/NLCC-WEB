@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - NLCC</title>
+    <meta name="description" content="Opportunities at Nara Lab on Computational Cognition.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="NLCC Logo" class="logo-img">
+                <img src="images/iitlogo.png" alt="IIT Mandi Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workshops.html" class="blink">Workshops</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="opportunities.html" class="active">Opportunities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 6rem;">
+            <h1 class="section-title animate-fade-in">Opportunities</h1>
+            <p class="section-subtitle animate-fade-in delay-1">We welcome motivated candidates from interdisciplinary
+                academic backgrounds who are interested in our ongoing and future projects.</p>
+
+            <div class="grid" style="grid-template-columns: 1fr; gap: 3rem;">
+                <div class="card animate-fade-in delay-1">
+                    <h3 style="color: var(--accent); font-size: 1.75rem;">Ph.D. Program</h3>
+                    <p style="margin-bottom: 1rem;">The lab is affiliated with the School of Biosciences and
+                        Bioengineering (SBB), the Centre for Human-Computer Interaction (CHCi), and the Indian Knowledge
+                        System and Mental Health Applications Centre (IKSMHA).</p>
+                    <p style="margin-bottom: 1rem;">Preference is given to candidates who are supported by external
+                        fellowships such as DST INSPIRE, CSIR-UGC NET, UGC NET, ICMR, and similar schemes.</p>
+                    <p style="margin-bottom: 0.5rem;">We host Joint Ph.D. students through five partner institutions
+                        affiliated with IIT Mandi:</p>
+                    <ul
+                        style="list-style-position: inside; margin-bottom: 1rem; color: var(--text-secondary); padding-left: 1rem;">
+                        <li>IIT Jammu</li>
+                        <li>IIT Ropar</li>
+                        <li>SVNIT Surat</li>
+                        <li>Punjab Engineering College (PEC)</li>
+                        <li>Gurugram University</li>
+                    </ul>
+                    <p style="font-weight: 500; color: var(--text-primary);"><strong>At present, the lab is not
+                            accepting new Ph.D. students.</strong></p>
+                </div>
+
+                <div class="card animate-fade-in delay-2">
+                    <h3 style="color: var(--accent); font-size: 1.75rem;">Internships</h3>
+                    <p style="margin-bottom: 1rem;">Internship positions are limited and are offered based on current
+                        research requirements.</p>
+                    <p style="margin-bottom: 1rem;">Interested applicants should review the research profiles of our
+                        Ph.D. scholars and contact those whose interests align with their own.</p>
+                    <p style="font-style: italic;">Please note that the lab does not host internships undertaken solely
+                        to fulfil mandatory degree requirements.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Nara Lab on Computational Cognition</div>
+            <p>&copy; 2026 NLCC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add a simple IntersectionObserver script to trigger animations on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.card').forEach((el) => {
+                // Remove animation initially for items not in viewport
+                el.style.opacity = '0';
+                el.classList.remove('animate-fade-in', 'delay-1', 'delay-2');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -12,11 +12,17 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">NL<span>CC</span></a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="NLCC Logo" class="logo-img">
+                <img src="images/iitlogo.png" alt="IIT Mandi Logo" class="logo-img">
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html">Introduction</a></li>
-                <li><a href="team.html" class="active">Team</a></li>
-                <li><a href="contact.html">Reach Out</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workshops.html" class="blink">Workshops</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="opportunities.html" class="active">Opportunities</a></li>
             </ul>
         </div>
     </nav>
@@ -27,42 +33,171 @@
             <p class="section-subtitle animate-fade-in delay-1">The interdisciplinary minds behind the Nara Lab on
                 Computational Cognition.</p>
 
-            <div class="grid">
+            <div class="grid" style="grid-template-columns: 1fr; gap: 2rem; max-width: 800px; margin: 0 auto;">
                 <!-- Principal Investigator -->
-                <div class="card team-member animate-fade-in delay-1">
-                    <div class="member-image">DR</div>
-                    <div class="member-role">Principal Investigator</div>
-                    <h3>Dr. Sanjeev Nara</h3>
-                    <p>Details.</p>
+                <div class="card team-member animate-fade-in delay-1"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">DR</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">Principal Investigator</div>
+                        <h3 style="margin-top: 0.5rem;">Dr. Sanjeev Nara</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Dr Sanjeev Nara is an Assistant Professor at
+                            IIT Mandi, specialising in biomedical signal/image processing, as well as cognitive
+                            neuroscience. His academic background includes degrees in Biomedical Engineering and a Ph.D.
+                            in Cognitive Neuroscience from BCBL, Spain. Before joining IIT Mandi, he was a Postdoctoral
+                            Research Fellow and Data Scientist at the University of Giessen, Germany, where he studied
+                            neuroaesthetics and vision using deep neural networks. He leads the Nara Lab on
+                            Computational Cognition, focusing on perception, cognition, and their computational
+                            modeling.</p>
+                        <a href="mailto:sanjeevnara@iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">sanjeevnara@iitmandi.ac.in</a>
+                    </div>
                 </div>
 
                 <!-- Researchers -->
-                <div class="card team-member animate-fade-in delay-2">
-                    <div class="member-image">SJ</div>
-                    <div class="member-role">Ph.D Scholar</div>
-                    <h3>Part Kumar</h3>
-                    <p>Details</p>
+                <div class="card team-member animate-fade-in delay-2"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">PK</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">PhD, 2025 - present</div>
+                        <h3 style="margin-top: 0.5rem;">Parth Kumar</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Parth Kumar has completed his MSc in
+                            Computational Biology and Bioinformatics at the Central University of Himachal Pradesh and
+                            holds a BSc (Hons) degree from the University of Delhi. His work integrates computational
+                            and cognitive approaches to study how the brain aligns with temporal regularities in sensory
+                            experience.</p>
+                        <a href="mailto:d25029@students.iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">d25029@students.iitmandi.ac.in</a>
+                    </div>
                 </div>
 
-                <div class="card team-member animate-fade-in delay-1">
-                    <div class="member-image">AK</div>
-                    <div class="member-role">Ph.D Scholar</div>
-                    <h3>P.V. Keerthi</h3>
-                    <p>Details</p>
+                <div class="card team-member animate-fade-in delay-1"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">PV</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">PhD, 2025 - present</div>
+                        <h3 style="margin-top: 0.5rem;">P.V. Keerthi</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">P. V. Keerthi has completed a Bachelor's
+                            degree in Psychology, Botany, and Zoology from Bangalore City University and a Master's
+                            degree in Cognitive Neuroscience from JSS Academy of Higher Education and Research, Mysuru.
+                            Her areas of research interest lie in neurodevelopmental disorders. Outside of her academic
+                            work, she enjoys trekking, herping, wildlife photography, and reading novels.</p>
+                        <a href="mailto:d25028@students.iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">d25028@students.iitmandi.ac.in</a>
+                    </div>
                 </div>
 
-                <div class="card team-member animate-fade-in delay-2">
-                    <div class="member-image">LM</div>
-                    <div class="member-role">Ph.D Scholar</div>
-                    <h3>Krishanu Deb</h3>
-                    <p>Details</p>
+                <div class="card team-member animate-fade-in delay-2"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">KD</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">PhD (Dual degree), 2025 - present</div>
+                        <h3 style="margin-top: 0.5rem;">Krishanu Deb</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Krishanu Deb is a dual degree MTech (R) + PhD
+                            student. He completed his B.Tech. in Computer Science from Gauhati University. His primary
+                            research interest lies in interpreting electrical signals from the brain and gut. In his
+                            free time, he can be found playing table tennis. He loves to travel and is an avid
+                            adventurer.</p>
+                        <a href="mailto:dd25013@students.iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">dd25013@students.iitmandi.ac.in</a>
+                    </div>
                 </div>
 
-                <div class="card team-member animate-fade-in delay-1">
-                    <div class="member-image">EB</div>
-                    <div class="member-role">Ph.D Scholar</div>
-                    <h3>Mohan Pandey</h3>
-                    <p>Details</p>
+                <div class="card team-member animate-fade-in delay-1"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">MP</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">PhD, 2025 - present</div>
+                        <h3 style="margin-top: 0.5rem;">Mohan Pandey</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Mohan holds Master's degrees in English
+                            Studies (IIT Madras) and Linguistics (Banaras Hindu University). His research interests
+                            include language and cognition, Indian Grammatical Tradition, cognitive linguistics,
+                            literary theory, Kāvyaśāstra (Indian poetics), and philosophy of Language. His doctoral work
+                            focuses on neurolinguistics. He loves poetry and reads across the Sanskrit, English, Hindi,
+                            and Urdu literary traditions.</p>
+                        <a href="mailto:d25118@students.iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">d25118@students.iitmandi.ac.in</a>
+                    </div>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-2"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">PP</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">M.Tech (Dual degree), 2021 - present</div>
+                        <h3 style="margin-top: 0.5rem;">Prateek Kumar Patel</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Prateek Kumar Patel is pursuing an Integrated
+                            B.Tech- M.Tech Dual Degree in Bioengineering at IIT Mandi, specializing in Biomedical
+                            Engineering with a Minor in Management. Currently, at NLCC, he works on the Pseudo-MRI
+                            project for MEG source localization. This brain–computer interface uses EEG signals to
+                            decode human intent for robotic control, aiming to advance assistive technologies,
+                            rehabilitation, and human–robot interaction.</p>
+                        <a href="mailto:b21018@students.iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">b21018@students.iitmandi.ac.in</a>
+                    </div>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-1"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">DL</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">M.Tech, 2024 - present</div>
+                        <h3 style="margin-top: 0.5rem;">Durba Lodh</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Durba is a final-year M.Tech student in
+                            Biotechnology at IIT Mandi, with the career goal of securing a position in the AI and ML
+                            sector within health sciences. Currently on her project, she is working on building neural
+                            networks and image processing of biological data. Her expertise spans wet-lab biotechnology
+                            and computational skill sets.</p>
+                        <a href="mailto:t24103@students.iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">t24103@students.iitmandi.ac.in</a>
+                    </div>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-2"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">SB</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">MTech (R), 2025 - present</div>
+                        <h3 style="margin-top: 0.5rem;">Shashank Baghel</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Shashank Baghel earned his B.E. in Electrical
+                            & Electronics Engineering from Panjab University, Chandigarh, where he developed deep
+                            learning models for Biomedical Imaging. He has published two peer-reviewed papers on
+                            autoencoder-based MRI denoising for brain tumours and deep learning techniques for
+                            computer-aided cancer diagnosis. Currently, he is pursuing an M.Tech (Research) in CHCi with
+                            a specialization in Computer Vision at IIT Mandi, focusing on vision-language models for
+                            Brain similarity.</p>
+                        <a href="mailto:s25038@students.iitmandi.ac.in"
+                            style="font-size: 0.875rem; color: var(--accent); text-decoration: none;">s25038@students.iitmandi.ac.in</a>
+                    </div>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-1"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">PN</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">Little Scientist A</div>
+                        <h3 style="margin-top: 0.5rem;">Parth Nara</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Parth is the youngest automobile expert in
+                            the Lab. At just 4–5 years old, he has already mastered the art of identifying cars on the
+                            road faster than most adults. With his keen observation, curiosity, and enthusiasm for
+                            wheels, engines, and speed, Parth brings a lively spirit and unique energy to the lab,
+                            keeping the team motivated with his boundless excitement.</p>
+                    </div>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-2"
+                    style="display: flex; text-align: left; align-items: flex-start; gap: 2rem;">
+                    <div class="member-image" style="margin: 0; flex-shrink: 0;">PR</div>
+                    <div style="flex-grow: 1;">
+                        <div class="member-role">Little Scientist B</div>
+                        <h3 style="margin-top: 0.5rem;">Prisha Nara</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Prisha is the melody specialist and
+                            innovation enthusiast of the Lab. Passionate about toys and gifted with a delightful singing
+                            talent, she brings harmony and imagination to our research space. Her ability to turn simple
+                            moments into joyful tunes makes her the heart of every brainstorming session. Prisha proudly
+                            champions and cheers everyone in the lab, reminding us that creativity and science are a
+                            perfect duet.</p>
+                    </div>
                 </div>
             </div>
         </div>

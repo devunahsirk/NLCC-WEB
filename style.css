@@ -166,6 +166,17 @@ nav {
     width: 100%;
 }
 
+@keyframes blinkText {
+    0% { color: var(--accent); opacity: 1; transform: scale(1); }
+    50% { color: #ef4444; opacity: 0.8; transform: scale(1.05); }
+    100% { color: var(--accent); opacity: 1; transform: scale(1); }
+}
+
+.nav-links a.blink {
+    animation: blinkText 1.5s infinite alternate;
+    font-weight: 700;
+}
+
 /* Layout */
 main {
     flex: 1;

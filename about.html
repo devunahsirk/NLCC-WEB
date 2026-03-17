@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NLCC</title>
+    <meta name="description" content="About Nara Lab on Computational Cognition and our lab photos.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src=images\logo.jpg alt="NLCC Logo" class="logo-img">
+
+                <img src=images\iitlogo.png alt="NLCC Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workshops.html" class="blink">Workshops</a></li>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 6rem;">
+            <h1 class="section-title animate-fade-in">About Us</h1>
+            <p class="section-subtitle animate-fade-in delay-1">Learn more about our lab's mission, vision, and see our
+                researchers in action.</p>
+
+            <div class="card animate-fade-in delay-1" style="margin-bottom: 3rem;">
+                <p style="margin-bottom: 1rem;">The Nara Lab on Computational Cognition (NLCC), based within the School
+                    of Biosciences and Bioengineering at IIT Mandi, is a young research group investigating how the
+                    brain interprets the world and constructs its representation of it. Our work focuses on the brain's
+                    remarkable ability to anticipate and predict what comes next, and how this predictive machinery
+                    supports perception, language, and behaviour.</p>
+                <p style="margin-bottom: 1rem;">We combine brain imaging (EEG, MEG, fMRI), computational modelling, and
+                    artificial intelligence to study how neural activity unfolds across space and time. By comparing
+                    biological brains with artificial networks, we aim to uncover shared rules of computation that
+                    explain how the brain suppresses the expected, highlights the surprising, and transforms experience
+                    into behaviour.</p>
+                <p style="margin-bottom: 1rem;">Current projects in the lab range from studying how emotions are
+                    recognised in neurotypical individuals to speech decoding, testing theories of predictive coding,
+                    and building brain–computer interfaces that translate neural signals into movement and interaction.
+                    In parallel, we develop AI-based tools to investigate brain–behaviour relationships, with
+                    applications in neurodevelopmental conditions.</p>
+                <p>By blending cognitive neuroscience, biomedical engineering, neurolinguistics, and machine learning,
+                    our goal is to bridge the gap between biology and computation, advancing both the fundamental
+                    understanding of the mind and practical innovations in health and technology.</p>
+            </div>
+
+            <h2 class="section-title animate-fade-in" style="font-size: 2rem; margin-top: 4rem;">Lab Photos</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <!-- Placeholder for Lab Photos -->
+                <div class="card animate-fade-in delay-1"
+                    style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: var(--bg-secondary); min-height: 200px;">
+                    <div style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;">📷</div>
+                    <p style="text-align: center; color: var(--text-secondary); margin: 0;">Lab Activity 1</p>
+                </div>
+                <div class="card animate-fade-in delay-2"
+                    style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: var(--bg-secondary); min-height: 200px;">
+                    <div style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;">📷</div>
+                    <p style="text-align: center; color: var(--text-secondary); margin: 0;">Lab Activity 2</p>
+                </div>
+                <div class="card animate-fade-in delay-1"
+                    style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: var(--bg-secondary); min-height: 200px;">
+                    <div style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;">📷</div>
+                    <p style="text-align: center; color: var(--text-secondary); margin: 0;">Lab Activity 3</p>
+                </div>
+                <div class="card animate-fade-in delay-2"
+                    style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: var(--bg-secondary); min-height: 200px;">
+                    <div style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;">📷</div>
+                    <p style="text-align: center; color: var(--text-secondary); margin: 0;">Lab Activity 4</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Nara Lab on Computational Cognition</div>
+            <p>&copy; 2026 NLCC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add a simple IntersectionObserver script to trigger animations on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.card').forEach((el) => {
+                // Remove animation initially for items not in viewport
+                el.style.opacity = '0';
+                el.classList.remove('animate-fade-in', 'delay-1', 'delay-2');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
