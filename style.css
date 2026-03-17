@@ -91,10 +91,17 @@ nav {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.25rem 2rem;
+    padding: 0.5rem 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.logo-img {
+    height: 50px;   /* adjust as needed */
+    /*width: auto;*/
+
 }
 
 .logo {
@@ -103,6 +110,7 @@ nav {
     color: var(--text-primary);
     text-decoration: none;
     letter-spacing: -0.5px;
+    height: 60px;
 }
 
 .logo span {
