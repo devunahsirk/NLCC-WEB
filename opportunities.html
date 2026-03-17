@@ -16,6 +16,11 @@
                 <img src="images/logo.jpg" alt="NLCC Logo" class="logo-img">
                 <img src="images/iitlogo.png" alt="IIT Mandi Logo" class="logo-img">
             </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="workshops.html" class="blink">Workshops</a></li>
@@ -95,6 +100,19 @@
                 el.classList.remove('animate-fade-in', 'delay-1', 'delay-2');
                 observer.observe(el);
             });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
         });
     </script>
 </body>
