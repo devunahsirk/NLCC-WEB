@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reach Out - NLCC</title>
+    <meta name="description" content="Contact the Nara Lab on Computational Cognition.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NL<span>CC</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html" class="active">Reach Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 6rem;">
+            <h1 class="section-title animate-fade-in">Reach Out to Us</h1>
+            <p class="section-subtitle animate-fade-in delay-1">We are always open to collaborations, research
+                inquiries, and prospective students.</p>
+
+            <div class="contact-wrapper animate-fade-in delay-2">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p style="margin-bottom: 3rem; color: #d1d5db;">Feel free to reach out using the details below or
+                        via our inquiry form. We aim to respond within 2-3 business days.</p>
+
+                    <div class="info-item">
+                        <h4>Lab Location</h4>
+                        <p>Cognitive Sciences Building, Room 402<br>University Campus, Nara</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Email Inquiries</h4>
+                        <p>hello@nlcc.research.edu<br>admissions@nlcc.research.edu</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Follow Our Research</h4>
+                        <p style="margin-top: 0.5rem;">
+                            <a href="#" style="color: white; text-decoration: underline; margin-right: 1rem;">Google
+                                Scholar</a>
+                            <a href="#" style="color: white; text-decoration: underline;">GitHub Repository</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#" method="POST"
+                        onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will get back to you soon.');">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required
+                                placeholder="Dr. Jane Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                placeholder="jane.doe@university.edu">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Inquiry Type</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="collaboration">Research Collaboration</option>
+                                <option value="phd">Prospective Student Inquiry</option>
+                                <option value="press">Press / Media</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" required
+                                placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Nara Lab on Computational Cognition</div>
+            <p>&copy; 2026 NLCC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger the animation for the contact wrapper
+            setTimeout(() => {
+                document.querySelector('.contact-wrapper').style.opacity = '1';
+                document.querySelector('.contact-wrapper').style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

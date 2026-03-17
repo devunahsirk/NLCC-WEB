@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - NLCC</title>
+    <meta name="description" content="Meet the researchers at Nara Lab on Computational Cognition.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NL<span>CC</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+                <li><a href="contact.html">Reach Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 6rem;">
+            <h1 class="section-title animate-fade-in">Meet Our Team</h1>
+            <p class="section-subtitle animate-fade-in delay-1">The interdisciplinary minds behind the Nara Lab on
+                Computational Cognition.</p>
+
+            <div class="grid">
+                <!-- Principal Investigator -->
+                <div class="card team-member animate-fade-in delay-1">
+                    <div class="member-image">DR</div>
+                    <div class="member-role">Principal Investigator</div>
+                    <h3>Dr. Sanjeev Nara</h3>
+                    <p>Details.</p>
+                </div>
+
+                <!-- Researchers -->
+                <div class="card team-member animate-fade-in delay-2">
+                    <div class="member-image">SJ</div>
+                    <div class="member-role">Ph.D Scholar</div>
+                    <h3>Part Kumar</h3>
+                    <p>Details</p>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-1">
+                    <div class="member-image">AK</div>
+                    <div class="member-role">Ph.D Scholar</div>
+                    <h3>P.V. Keerthi</h3>
+                    <p>Details</p>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-2">
+                    <div class="member-image">LM</div>
+                    <div class="member-role">Ph.D Scholar</div>
+                    <h3>Krishanu Deb</h3>
+                    <p>Details</p>
+                </div>
+
+                <div class="card team-member animate-fade-in delay-1">
+                    <div class="member-image">EB</div>
+                    <div class="member-role">Ph.D Scholar</div>
+                    <h3>Mohan Pandey</h3>
+                    <p>Details</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Nara Lab on Computational Cognition</div>
+            <p>&copy; 2026 NLCC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add a simple IntersectionObserver script to trigger animations on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.card').forEach((el) => {
+                // Remove animation initially for items not in viewport
+                el.style.opacity = '0';
+                el.classList.remove('animate-fade-in', 'delay-1', 'delay-2');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
