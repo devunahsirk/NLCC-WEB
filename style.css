@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
 
+
+
+@media (max-width: 768px) {
+    .logo {
+        height: 50px;
+    }
+
+    .logo-img {
+        max-height: 40px;
+    }
+}
+    
 :root {
     --bg-primary: #ffffff;
     --bg-secondary: #f3f4f6;
@@ -99,18 +111,19 @@ nav {
 
 
 .logo-img {
-    height: 50px;   /* adjust as needed */
-    /*width: auto;*/
-
+    height: 100%;      /* fill parent height */
+    max-height: 50px;  /* prevent oversized scaling */
+    width: auto;       /* keep aspect ratio */
+    object-fit: contain;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     text-decoration: none;
-    letter-spacing: -0.5px;
-    height: 60px;
+    height: 60px;   /* navbar height control */
 }
 
 .logo span {
