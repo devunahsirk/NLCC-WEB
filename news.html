@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - NLCC</title>
+    <meta name="description" content="Latest news, talks, and workshops from Nara Lab on Computational Cognition.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="NLCC Logo" class="logo-img">
+                <img src="images/iitlogo.png" alt="IIT Mandi Logo" class="logo-img">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about_pi.html">About PI</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="workshops.html" class="blink">Public Outreach</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 6rem;">
+            <h1 class="section-title animate-fade-in">News & Events</h1>
+            <p class="section-subtitle animate-fade-in delay-1">Stay updated with the latest happenings at NLCC.</p>
+
+            <h2 class="section-title animate-fade-in" style="font-size: 2rem; margin-top: 4rem; text-align: left;">Talk
+                by Sir</h2>
+            <div class="grid" style="grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem;">
+                <div class="card animate-fade-in delay-1">
+                    <h3 style="margin-top: 0; color: var(--accent);">Upcoming Talk on Cognitive Neuroscience</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary);">Date: TBA |
+                        Location: IIT Mandi</p>
+                    <p>Details about the upcoming talk by Dr. Sanjeev Nara will be updated here soon.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title animate-fade-in" style="font-size: 2rem; margin-top: 4rem; text-align: left;">
+                Workshop We Attended</h2>
+            <div class="grid" style="grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem;">
+                <div class="card animate-fade-in delay-1">
+                    <h3 style="margin-top: 0; color: var(--accent);">Recent Workshop Participation</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary);">Date: TBA |
+                        Location: Various</p>
+                    <p>Details about the workshops attended by our lab members will be highlighted here.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Nara Lab on Computational Cognition</div>
+            <p>&copy; 2026 NLCC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add a simple IntersectionObserver script to trigger animations on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.card, .section-title, .section-subtitle').forEach((el) => {
+                el.style.opacity = '0';
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

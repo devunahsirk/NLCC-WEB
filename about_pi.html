@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PI - NLCC</title>
+    <meta name="description"
+        content="About Dr. Sanjeev Nara, Principal Investigator at NLCC, including teaching and institutional responsibilities.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="NLCC Logo" class="logo-img">
+                <img src="images/iitlogo.png" alt="IIT Mandi Logo" class="logo-img">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about_pi.html" class="active">About PI</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="workshops.html" class="blink">Public Outreach</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 6rem;">
+            <!-- Principal Investigator Profile -->
+            <div class="card animate-fade-in delay-1"
+                style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 4rem;">
+                <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+                    <div class="member-image"
+                        style="margin: 0; flex-shrink: 0; padding: 0; overflow: hidden; height: 160px; width: 160px;">
+                        <img src="images/sn.webp" alt="Sanjeev Nara"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <div style="flex-grow: 1;">
+                        <h1 class="section-title" style="text-align: left; margin-top: 0; margin-bottom: 0.5rem;">Dr.
+                            Sanjeev Nara</h1>
+                        <div class="member-role" style="margin-bottom: 1rem; font-size: 1.1rem;">Principal Investigator
+                        </div>
+                        <p style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-secondary);">
+                            Dr Sanjeev Nara is an Assistant Professor at IIT Mandi, specialising in biomedical
+                            signal/image processing, as well as cognitive neuroscience. His academic background includes
+                            degrees in Biomedical Engineering and a Ph.D. in Cognitive Neuroscience from BCBL, Spain.
+                            Before joining IIT Mandi, he was a Postdoctoral Research Fellow and Data Scientist at the
+                            University of Giessen, Germany, where he studied neuroaesthetics and vision using deep
+                            neural networks. He leads the Nara Lab on Computational Cognition, focusing on perception,
+                            cognition, and their computational modeling.
+                        </p>
+                        <a href="mailto:sanjeevnara@iitmandi.ac.in"
+                            style="font-size: 1rem; color: var(--accent); text-decoration: none; font-weight: 500;">
+                            📧 sanjeevnara@iitmandi.ac.in
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teaching Section -->
+            <h2 class="section-title animate-fade-in delay-1"
+                style="font-size: 2rem; margin-top: 2rem; text-align: left;">Teaching</h2>
+            <div class="grid animate-fade-in delay-2"
+                style="grid-template-columns: 1fr; gap: 1rem; margin-bottom: 4rem;">
+                <div class="card" style="padding: 2rem;">
+                    <ul style="list-style-position: inside; color: var(--text-secondary); line-height: 1.8;">
+                        <li><strong>BY534 : Functional Neuroimaging and Data Analysis:</strong> to B.Tech, M.Tech and
+                            PhD students at IIT Mandi (Aug to Dec 2025)</li>
+                        <li><strong>BY534 : Functional Neuroimaging and Data Analysis:</strong> to B.Tech, M.Tech and
+                            PhD students at IIT Mandi (Jan to July 2026)</li>
+                        <li><strong>BY531 : Quantitative Biology and Data Analytics:</strong> to B.Tech, M.Tech and PhD
+                            students
+                            at IIT Mandi (Jan to Jul 2026)</li>
+                        <li><em>(Details to be updated)</em></li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Institutional Responsibilities Section -->
+            <h2 class="section-title animate-fade-in delay-1"
+                style="font-size: 2rem; margin-top: 2rem; text-align: left;">Institutional Responsibilities</h2>
+            <div class="grid animate-fade-in delay-2"
+                style="grid-template-columns: 1fr; gap: 1rem; margin-bottom: 4rem;">
+                <div class="card" style="padding: 2rem;">
+                    <ul style="list-style-position: inside; color: var(--text-secondary); line-height: 1.8;">
+                        <li><strong>Committee Member:</strong> Bioscience Program Committee</li>
+                        <li><strong>Advisor:</strong> Biomedical Engineering Student Group</li>
+                        <li><em>(Details to be updated)</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Nara Lab on Computational Cognition</div>
+            <p>&copy; 2026 NLCC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- IntersectionObserver for Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.card, .section-title, .grid').forEach((el) => {
+                el.style.opacity = '0';
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <!-- Mobile Navigation Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
